@@ -5,7 +5,7 @@ import axios from "axios";
 import weatherJson from "../static/weather.json";
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFTIY9UAZbs0bbL10jeb3LtxT4BAXhaDM"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=[API_KEY]"></script>
 
 export const MountainAPI = () => {
 
