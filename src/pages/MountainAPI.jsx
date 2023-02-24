@@ -68,7 +68,6 @@ export const MountainAPI = () => {
             })
     });
 
-
     useEffect(() => {
         const API_KEY = 'APIKEY';
         axios.get(
@@ -85,8 +84,6 @@ export const MountainAPI = () => {
                 console.error(error)
             })
     });
-
-
 
     return (
         <>
