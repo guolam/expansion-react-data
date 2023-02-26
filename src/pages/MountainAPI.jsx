@@ -3,6 +3,7 @@ import { ActionButton } from "../components/ActionButton";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
 import weatherJson from "../static/weather.json";
+import Map from '../components/parking';
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=[API_KEY]"></script>
@@ -42,6 +43,10 @@ export const MountainAPI = () => {
                 console.error(error)
             })
     }, [id]);
+
+    useEffect(() => {
+    })
+
 
     useEffect(() => {
         fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
@@ -90,6 +95,9 @@ export const MountainAPI = () => {
             <p className="m-[30px] text-center font-semibold rounded-md h-10">APIを取るぞ</p>
             <div>
                 <ActionButton text="ID変更" action={getRandomID} />
+            </div>
+            <div>
+                <Map />
             </div>
             <div>
                 <p className="m-[30px]">{name}は

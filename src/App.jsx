@@ -3,11 +3,15 @@ import { Omikuji } from "./pages/Omikuji";
 import { Janken } from "./pages/Janken";
 import { MountainAPI } from "./pages/MountainAPI";
 import { BookCreate } from "./pages/BookCreate";
+import { BookIndex } from "./pages/BookIndex";
+import { BookShow } from "./pages/BookShow";
+
 
 import Image from './img/janken.png';
 import Image2 from './img/star.png';
 import Image3 from './img/yama.png';
 import Image4 from './img/book.png';
+import Image5 from './img/BookIndex.png';
 
 const App = () => {
   return (
@@ -29,7 +33,12 @@ const App = () => {
             <li>
               <Link to="/BookCreate"><img className="flex-1 h-12" src={Image4} alt="Image" /></Link>
             </li>
+            <li>
+              {/* link toはアドレスというイメージです */}
+              <Link to="/book-index"><img className="flex-1 h-12" src={Image5} alt="Image" /></Link>
+            </li>
           </div>
+
         </ul>
 
         <Routes>
@@ -37,6 +46,9 @@ const App = () => {
           <Route path="/Janken" element={<Janken />} />
           <Route path="/MountainAPI" element={<MountainAPI />} />
           <Route path="/BookCreate" element={<BookCreate />} />
+          <Route path="/book-index" element={<BookIndex />} />
+          <Route path="/Book-show/:id" element={<BookShow />} />
+
         </Routes>
       </div >
     </BrowserRouter >
