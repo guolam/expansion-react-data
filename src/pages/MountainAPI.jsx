@@ -6,7 +6,7 @@ import weatherJson from "../static/weather.json";
 import Map from '../components/parking';
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=[API_KEY]"></script>
+
 
 export const MountainAPI = () => {
 
